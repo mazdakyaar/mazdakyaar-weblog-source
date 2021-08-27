@@ -1,0 +1,22 @@
+image: monachus/hugo:latest
+
+workflow:
+  rules:
+    - if: '$CI_COMMIT_BRANCH'
+
+test:
+  script:
+  - hugo --minify
+  except:
+  - master
+
+pages:
+  script:
+  - hugo --minify && gzip -k -6 $(find public '(' -name "*.html" -or -name "*.xml" -or -name "*.js" -or -name "*.css" -or -name "*.svg" ')' -and -size +160c)  
+  artifacts:
+    paths:
+    - public
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "main"'
+
+
