@@ -1,0 +1,18 @@
+## Root URL is https://mazdakyaar.framagit.io
+baseurl = ""
+languageCode = "fa-IR"
+title = "مزدکیار"
+paginate = 10
+theme = "tea"
+enableRobotsTXT = true
+MetaDataFormat = "toml"
+
+[params]
+SidebarRecentLimit = 15
+dateformat = "Jan 2, 2006"
+description = "نوشتارهایی برای افزایش آگاهی، تا بتوانیم آزادی به دست آوریم و ایران را آباد کنیم"
+KeyWords = "آگاهی,آزادی,آبادی,انسانیت,عقلانیت,جامعه,اقتصاد,سیاست,زیست بوم,awareness,freedom,construction,humanity,sensability,scholarism,socialism,economy,politics,bioecology"
+
+[params.social]
+Email         = "mazdakyaar@protonmail.com"
+

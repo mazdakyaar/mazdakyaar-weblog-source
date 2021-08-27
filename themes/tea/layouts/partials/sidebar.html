@@ -1,0 +1,36 @@
+
+<!--form class="w3-row w3-border w3-light-grey w3-margin-top" id="searchBar" action="javascript:void topNavController.onSearchAction()">
+  <button type="submit" class="w3-button w3-quarter">&#128270;</button>
+  <input class="w3-threequarter w3-border-0 w3-padding-small" type="text" id="searchField" placeholder="جستجو" name="search"/>
+</form-->
+
+<h2>آخرین مطالب</h2>
+<ul>
+{{- range first .Site.Params.SidebarRecentLimit .Site.RegularPages -}}
+	<li>
+		<div class="ellipsized">
+		<a href="{{.RelPermalink}}">{{.Title}}</a>
+		<span class="fulltext">{{.Title}}</span>
+		</div>
+	</li>
+{{- end -}}
+</ul>
+<hr />
+<h2>رسته ها</h2>
+<ul>
+{{ range $name, $label := .Site.Data.sections.labels }}
+<li><a href="/{{ $name }}/">{{ $label }}</a></li>
+{{ end }}
+</ul>
+<hr />
+<h2>بایگانی</h2>
+<ul>
+{{ $thisYear := .Site.Data.thisPersianYear.year }}
+{{ range .Site.Data.thisPersianYear.months }}
+	{{ if gt .count 0 }}
+	<li><a href="#">{{ .name }}{{ " " }}{{ $thisYear }}{{ " (" }}{{ .countRep }}{{ ")" }}</a></li>
+	{{ end }}
+{{ end }}
+</ul>
+<hr />
+

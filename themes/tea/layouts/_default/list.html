@@ -1,0 +1,28 @@
+{{ define "specific title" }}
+	{{- $section := .Section -}}
+	{{- range .Site.Menus.main -}}{{- if eq $section .Identifier -}}{{- .Title -}}{{- end -}}{{- end -}}
+{{ end }}
+
+{{- define "title" -}}
+	{{- block "specific title" . -}}{{- end -}}{{- " | " -}}{{- .Site.Title -}}
+{{- end -}}
+
+{{ define "main" }}
+        <h3>{{- block "specific title" . -}}{{- end -}}</h3>
+            {{ range (.Paginate .Data.Pages.ByPublishDate).Pages }}
+              <div class="w3-row w3-panel">
+                <div class="w3-col s4">
+                  <h5 class="w3-left-align">
+                    <script type="text/javascript">document.write(convertDateStringToShamsi('{{ .Date.Format "2006-1-2" }}'));</script><noscript>{{ .Date.Format "2006-1-2" }}</noscript>
+                  </h5>
+                 </div>
+                 <div class="w3-col s8">
+                   <h5 class="w3-right-align">
+                   <strong><a href="{{ .RelPermalink }}index.html">{{ .Title | markdownify }}</a></strong>
+                  </h5>
+                </div>
+                <p class="w3-right-align"><small>{{ .Params.description }}</small></p>
+              </div> <!-- row and panel-->
+            {{ end }}
+            {{ partial "pagination.html" . }}
+{{ end }}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {{ partial "meta.html" . }}
+   	<meta name="keywords" content="{{ block "keywords" . }}{{ .Site.Params.KeyWords }}{{ end }}"/>
+    <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
+    
+    {{ partial "stylesheet.html" . }}
+    
+    {{ `<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->` | safeHTML }}
+  </head>
+  <body>
+  {{ partial "inline_js_license" . }}
+  <script type="text/javascript" src="{{ .Site.Params.rootPath }}/js/shamsi-date.min.js"></script>
+  {{ partial "header" . }}
+<div class="w3-row">
+  <div class="w3-container" id="sidebar">
+  {{ partial "sidebar" . }}
+  </div>
+  <div class="w3-rest w3-container w3-border-left" id="mainPageContainer">
+    {{ block "main" . }}
+    {{ end }}
+  </div>
+</div>
+    {{ partial "js" . }}
+  </body>
+</html>

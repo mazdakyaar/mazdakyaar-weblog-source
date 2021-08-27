@@ -1,0 +1,8 @@
+name = "Sustain"
+license = "CC-SA"
+description = "Theme for social blog"
+
+tags = ["blog", "minimal", "responsive"]
+features = ["responsive", "syntax highlighting"]
+min_version = 0.1
+

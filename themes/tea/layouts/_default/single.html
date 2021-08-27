@@ -1,0 +1,32 @@
+{{ define "title" }}{{ .Title }}{{ " | " }}{{ .Site.Title }}{{ end }}
+
+{{ define "keywords" }}{{ if .Params.tags }}{{ delimit .Params.tags "," }}{{ else }}{{ .Site.Params.KeyWords }}{{ end }}{{ end }}
+
+{{ define "main" }}
+<article>
+          <h1>
+            <strong><a href="{{ .Permalink }}index.html">{{ .Title }}</a></strong>
+          </h1>
+          <h4>
+          <script type="text/javascript">document.write(convertDateStringToShamsi('{{ .Date.Format "2006-1-2" }}'));</script><noscript>{{ .Date.Format "2006-1-2" }}</noscript>
+          </h4>
+	<h4>
+            {{ range .Params.tags }}
+            <span class="w3-tag w3-green">{{ . }}</span>&nbsp;
+            {{ end }}
+	</h4>
+            {{ if .Params.UsesMath }}
+            <noscript><p><strong>توجه:</strong>در این مقاله فرمولهای ریاضی وجود دارد که با زبان <a href="https://www.w3.org/TR/REC-MathML/">MathML</a>  که استاندارد وب است نوشته شده اند. مرورگرهای فایرفاکس و کروم ۲۴ این فرمولها را بدون مشکل نمایش می‌دهند. برای نمایش این فرمولها در سایر مرورگرها از اسکریپت <a href="https://docs.mathjax.org/en/latest/mathjax.html">MathJax</a> استفاده می کنیم که در انتهای همین صفحه افزوده شده است. اگر مرورگر شما از MathML پشتیانی نمی‌کند لازم است جاوا اسکریپت را روی مرورگر خود فعال کنید و یک بار دیگر این صفحه را بارگذاری کنید.</p></noscript>
+            {{ end }}
+              {{ .Content }}
+              <hr>
+              <div class="related-posts">
+                <h5>مقالات مرتبط</h5>
+                <ul>
+                {{ range first 3 ( where ( where .Site.Pages.ByDate.Reverse ".Params.tags" "intersect" .Params.tags ) "Permalink" "!=" .Permalink ) }}
+                  <li><strong><a href="{{ .RelPermalink }}index.html">{{ .Title | markdownify }}</a></strong> (<script type="text/javascript">document.write(convertDateStringToShamsi('{{ .Date.Format "2006-1-2" }}'));</script><noscript>{{ .Date.Format "2006-1-2" }}</noscript>)</li>
+                {{ end }}
+                </ul>
+              </div> <!-- related posts -->
+</article>
+{{ end }}
