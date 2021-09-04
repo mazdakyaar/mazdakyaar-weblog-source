@@ -1,7 +1,6 @@
 /* Main page with stikky-footer */
 html,body {
   height: 100%;
-  background-image: url("blue-pattern-hexagonal.png");
   font-family: Tahoma,'Iranian Sans','DejaVu Sans','Noto Sans Arabic','Noto Kufi Arabic','Droid Arabic Kufi',sans-serif;
   /* The html and body elements cannot have any padding or margin. */
   direction: rtl;
