@@ -12,6 +12,7 @@ SidebarRecentLimit = 15
 dateformat = "Jan 2, 2006"
 description = "نوشتارهایی برای افزایش آگاهی، تا بتوانیم آزادی به دست آوریم و ایران را آباد کنیم"
 KeyWords = "آگاهی,آزادی,آبادی,انسانیت,عقلانیت,جامعه,اقتصاد,سیاست,زیست بوم,awareness,freedom,construction,humanity,sensability,scholarism,socialism,economy,politics,bioecology"
+remoteRoot = "https://mazdakyaar.framagit.io"
 
 [params.social]
 Email         = "mazdakyaar@protonmail.com"
