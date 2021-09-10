@@ -1,8 +1,10 @@
 {{ print "<?xml version=\"1.0\" encoding=\"UTF-8\"?>" | safeHTML }}
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 {{ range .Site.Pages }}
 	<url>
-    	<loc>{{ .Site.Params.remoteRoot }}{{ .Permalink }}</loc>
+    	<loc>{{ .Site.Params.rootPath }}{{ .Permalink }}</loc>
     	<lastmod>{{ safeHTML ( .Lastmod.Format "2006-01-02" ) }}</lastmod>
     	<changefreq>{{ if .IsPage }}monthly{{ else }}weekly{{ end }}</changefreq>
     </url>
