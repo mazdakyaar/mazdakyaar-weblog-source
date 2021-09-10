@@ -12,9 +12,7 @@
             {{ range (.Paginate .Data.Pages.ByPublishDate).Pages }}
               <div class="w3-row w3-panel">
                 <div class="w3-col s4">
-                  <h5 class="w3-left-align">
-                    <script type="text/javascript">document.write(convertDateStringToShamsi('{{ .Date.Format "2006-1-2" }}'));</script><noscript>{{ .Date.Format "2006-1-2" }}</noscript>
-                  </h5>
+                  <h5 class="w3-left-align date" _datetick="{{ .Date.Unix }}">{{ .Date.Format "Monday, Jan 2, 2006" }}</h5>
                  </div>
                  <div class="w3-col s8">
                    <h5 class="w3-right-align">

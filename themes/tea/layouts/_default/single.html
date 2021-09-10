@@ -7,9 +7,7 @@
           <h1>
             <strong><a href="{{ .Permalink }}index.html">{{ .Title }}</a></strong>
           </h1>
-          <h4>
-          <script type="text/javascript">document.write(convertDateStringToShamsi('{{ .Date.Format "2006-1-2" }}'));</script><noscript>{{ .Date.Format "2006-1-2" }}</noscript>
-          </h4>
+          <h4 class="date" _datetick="{{ .Date.Unix }}">{{ .Date.Format "Monday, Jan 2, 2006" }}</h4>
 	<h4>
             {{ range .Params.tags }}
             <span class="w3-tag w3-green">{{ . }}</span>&nbsp;
@@ -24,7 +22,7 @@
                 <h5>مقالات مرتبط</h5>
                 <ul>
                 {{ range first 3 ( where ( where .Site.Pages.ByDate.Reverse ".Params.tags" "intersect" .Params.tags ) "Permalink" "!=" .Permalink ) }}
-                  <li><strong><a href="{{ .RelPermalink }}index.html">{{ .Title | markdownify }}</a></strong> (<script type="text/javascript">document.write(convertDateStringToShamsi('{{ .Date.Format "2006-1-2" }}'));</script><noscript>{{ .Date.Format "2006-1-2" }}</noscript>)</li>
+                  <li><strong><a href="{{ .RelPermalink }}index.html">{{ .Title | markdownify }}</a></strong> (<span class="date" _datetick="{{ .Date.Unix }}">{{ .Date.Format "Monday, Jan 2, 2006" }}</span>)</li>
                 {{ end }}
                 </ul>
               </div> <!-- related posts -->

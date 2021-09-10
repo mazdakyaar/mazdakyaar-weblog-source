@@ -122,3 +122,13 @@ function calcSearchRelevance(metadata, query)
 	return presentKeywords+newness;
 }
 
+//==================================
+// Default code running in each page
+var dateElements = document.getElementsByClassName("date");
+for (let i=0;i<dateElements.length;i++)
+{
+	var unixTime = dateElements[i].attributes["_datetick"].value;
+	dateElements[i].innerText = jalaaliCalendar.convertToJalaali(unixTime);
+}	
+
+
