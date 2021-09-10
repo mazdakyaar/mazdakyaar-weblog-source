@@ -1,8 +1,8 @@
-name = "Sustain"
+name = "Tea"
 license = "CC-SA"
 description = "Theme for social blog"
 
 tags = ["blog", "minimal", "responsive"]
-features = ["responsive", "syntax highlighting"]
+features = ["responsive"]
 min_version = 0.1
 
