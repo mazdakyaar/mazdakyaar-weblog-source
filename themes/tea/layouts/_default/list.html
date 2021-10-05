@@ -1,6 +1,5 @@
 {{ define "specific title" }}
-	{{- $section := .Section -}}
-	{{- range .Site.Menus.main -}}{{- if eq $section .Identifier -}}{{- .Title -}}{{- end -}}{{- end -}}
+	{{- .Title -}}
 {{ end }}
 
 {{- define "title" -}}

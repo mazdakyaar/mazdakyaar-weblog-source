@@ -8,6 +8,10 @@
     <meta name="description" content="{{ .Site.Params.description }}"/>
     {{ end }}{{ end }}
     <meta Content-math-Type="text/mathml"/>
+    {{ $keywords := "" }}
+    {{ if .Params.Tags }}{{ $keywords = .Params.Tags }}{{ else }}{{ $keywords = .Site.Params.KeyWords }}{{ end }}
+    <meta name="keywords" content="{{ delimit $keywords "," }}"/>
+   	
    	{{ template "_internal/opengraph.html" . }}
    	{{ hugo.Generator }}
-    <link rel="shortcut icon" type="image/x-icon" href="{{ .Site.Params.rootPath }}/images/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ .Site.BaseURL }}images/favicon.ico">
