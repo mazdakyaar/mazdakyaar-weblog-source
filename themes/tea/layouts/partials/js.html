@@ -1,14 +1,14 @@
 
-<script type="text/javascript" src="{{ .Site.BaseURL }}js/jalaali.min.js"></script>
+<script type="text/javascript" src="{{ .Site.BaseURL }}/js/jalaali.min.js"></script>
 
-<script type="text/javascript" src="{{ .Site.BaseURL }}js/main.js"></script>
+<script type="text/javascript" src="{{ .Site.BaseURL }}/js/main.js"></script>
 
 {{- range .Site.Params.custom_js -}}
-<script src="{{ .Site.BaseURL }}js/{{ . }}{{ ".js" }}"></script>
+<script src="{{ .Site.BaseURL }}/js/{{ . }}{{ ".js" }}"></script>
 {{ end }}
 
 {{- range .Params.custom_js -}}
-<script src="{{ .Site.BaseURL }}js/{{ . }}{{ ".js" }}"></script>
+<script src="{{ .Site.BaseURL }}/js/{{ . }}{{ ".js" }}"></script>
 {{ end }}
 
 {{ if .Params.UsesMath }}
