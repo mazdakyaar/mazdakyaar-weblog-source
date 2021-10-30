@@ -35,3 +35,8 @@ draft: false
 
 ## تماس با ما
 پست الکترونیک : mazdakyaar@gmail.com
+
+فعالیتهای این وبسایت با فعالیت های [حزب ایران آباد](https://iraneabad.org/) و شبکه تلویزیونی [دیدگاه](https://www.didgah.tv/) هم جهت است. برای آگاهی از این فعالیتها به یکی از این دو منبع مراجعه کنید:
+
+* [iraneabad.org](https://iraneabad.org/)
+* [didgah.tv](https://www.didgah.tv/)
