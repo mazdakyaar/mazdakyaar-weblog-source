@@ -20,6 +20,8 @@ figcaption{
 
 img{max-width: inherit;}
 
+ol { list-style-type: persian; }
+
 #sidebar a, #mainPageContainer a {
 	color: DarkGreen;
 	transition: all .4s ease;
