@@ -9,10 +9,13 @@
           </h1>
           <h4 class="date" _datetick="{{ .Date.Unix }}">{{ .Date.Format "Monday, Jan 2, 2006" }}</h4>
 	<h4>
-            {{ range .Params.tags }}
-            <span class="w3-tag w3-green">{{ . }}</span>&nbsp;
-            {{ end }}
+    	{{ range .Params.tags }}
+        <span class="w3-tag w3-green">{{ . }}</span>&nbsp;
+        {{ end }}
 	</h4>
+	<h5>
+		<a href="{{ .CurrentSection.Permalink }}">&#128193; {{ .CurrentSection.Title }}</a>
+	</h5>
             {{ if .Params.UsesMath }}
             <noscript><p><strong>توجه:</strong>در این مقاله فرمولهای ریاضی وجود دارد که با زبان <a href="https://www.w3.org/TR/REC-MathML/">MathML</a>  که استاندارد وب است نوشته شده اند. مرورگرهای فایرفاکس و کروم ۲۴ این فرمولها را بدون مشکل نمایش می‌دهند. برای نمایش این فرمولها در سایر مرورگرها از اسکریپت <a href="https://docs.mathjax.org/en/latest/mathjax.html">MathJax</a> استفاده می کنیم که در انتهای همین صفحه افزوده شده است. اگر مرورگر شما از MathML پشتیانی نمی‌کند لازم است جاوا اسکریپت را روی مرورگر خود فعال کنید و یک بار دیگر این صفحه را بارگذاری کنید.</p></noscript>
             {{ end }}
