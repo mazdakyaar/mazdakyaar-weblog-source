@@ -1,5 +1,5 @@
 ---
-title: "بشریت"
+title: "ادبیات"
 description: ""
 tags: []
 ---
