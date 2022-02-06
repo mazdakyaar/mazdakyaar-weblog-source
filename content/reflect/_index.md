@@ -1,6 +1,0 @@
----
-title: "بازتاب"
-description: ""
-tags: []
----
-
