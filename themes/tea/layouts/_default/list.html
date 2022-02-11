@@ -8,7 +8,7 @@
 
 {{ define "main" }}
         <h3>{{- block "specific title" . -}}{{- end -}}</h3>
-            {{ range (.Paginate .Data.Pages.ByPublishDate).Pages }}
+            {{ range (.Paginate .Data.Pages.ByPublishDate.Reverse).Pages }}
               <div class="w3-row w3-panel">
                 <div class="w3-col s4">
                   <h5 class="w3-left-align date" _datetick="{{ .Date.Unix }}">{{ .Date.Format "Monday, Jan 2, 2006" }}</h5>
