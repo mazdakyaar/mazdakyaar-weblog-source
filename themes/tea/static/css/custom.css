@@ -18,7 +18,8 @@ figcaption{
 	text-align: center;
 }
 
-img{max-width: inherit;}
+/* keep this */
+img{max-width: 100%;}
 
 ol { list-style-type: persian; }
 
