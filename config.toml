@@ -19,3 +19,9 @@ Email         = "mazdakyaar@gmail.com"
 
 [taxonomies]
   tag = 'tags'
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+

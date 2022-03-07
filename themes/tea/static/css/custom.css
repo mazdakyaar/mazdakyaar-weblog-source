@@ -150,6 +150,15 @@ blockquote {
   background-color: #fff;
 }
 
+/* Code blocks */
+pre{
+	direction: ltr;
+	text-align: left;
+	background-color: LightCyan;
+	border-style: solid;
+	border-width: thin;
+}
+
 /***** Slides Galery ******/
 .container, .mySlides, .slide-column, .slides-row, .cursor, .prev, .next, .demo {
 	box-sizing: border-box;
