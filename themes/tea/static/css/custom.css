@@ -32,6 +32,7 @@ blockquote {
 	color: DarkGreen;
 	transition: all .4s ease;
 	text-decoration: none;
+	font-weight: bold;
 }
 
 #sidebar a:hover, #mainPageContainer a:hover {
