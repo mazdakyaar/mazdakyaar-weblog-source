@@ -3,15 +3,11 @@
   <ul class="pager">
 
     {{ if .Paginator.HasPrev }}
-    <li><a href="{{ .Paginator.Prev.URL }}index.html">قبلی</a></li>
-    {{ else }}
-    <li class="disabled"><a href="#">قبلی</a></li>
+    <li><a href="{{ .Paginator.Prev.URL }}index.html">جدیدتر</a></li>
     {{ end }}
 
     {{ if .Paginator.HasNext }}
-    <li><a href="{{ .Paginator.Next.URL }}index.html">بعدی</a></li>
-    {{ else }}
-    <li class="disabled"><a href="#">بعدی</a></li>
+    <li><a href="{{ .Paginator.Next.URL }}index.html">قدیمی تر</a></li>
     {{ end }}
 
   </ul>
