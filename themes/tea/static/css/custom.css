@@ -28,8 +28,11 @@ blockquote {
 	padding: 0.5em;
 }
 
-#sidebar a, #mainPageContainer a {
+a {
 	color: DarkGreen;
+}
+
+#sidebar a, #mainPageContainer a {
 	transition: all .4s ease;
 	text-decoration: none;
 	font-weight: bold;
@@ -149,6 +152,11 @@ blockquote {
   color: #777;
   cursor: not-allowed;
   background-color: #fff;
+}
+
+/* Keywords as a link */
+.w3-green > a {
+	color: White;
 }
 
 /* Code blocks */

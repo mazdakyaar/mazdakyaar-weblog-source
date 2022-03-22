@@ -1,0 +1,14 @@
+{{- define "title" -}}
+	{{- "کلمات کلیدی" -}}{{- " | " -}}{{- .Site.Title -}}
+{{- end -}}
+
+{{ define "main" }}
+        <h3>کلمات کلیدی</h3>
+            {{ range .Data.Terms.Alphabetical }}
+              <div class="w3-row w3-panel">
+                   <h5 class="w3-right-align">
+                   <strong><a href="{{ .Page.RelPermalink }}index.html">{{ .Page.Title | markdownify }}</a></strong>
+                  </h5>
+              </div> <!-- row and panel-->
+            {{ end }}
+{{ end }}

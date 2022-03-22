@@ -1,0 +1,25 @@
+{{ define "specific title" }}
+	{{- .Title -}}
+{{ end }}
+
+{{- define "title" -}}
+	{{- block "specific title" . -}}{{- end -}}{{- " | " -}}{{- .Site.Title -}}
+{{- end -}}
+
+{{ define "main" }}
+        <h3>{{- block "specific title" . -}}{{- end -}}</h3>
+            {{ range (.Paginate .Data.Pages.ByPublishDate.Reverse).Pages }}
+              <div class="w3-row w3-panel">
+                <div class="w3-col s4">
+                  <h5 class="w3-left-align date" _datetick="{{ .Date.Unix }}">{{ .Date.Format "Monday, Jan 2, 2006" }}</h5>
+                 </div>
+                 <div class="w3-col s8">
+                   <h5 class="w3-right-align">
+                   <strong><a href="{{ .RelPermalink }}index.html">{{ .Title | markdownify }}</a></strong>
+                  </h5>
+                </div>
+                <p class="w3-right-align"><small>{{ .Params.description }}</small></p>
+              </div> <!-- row and panel-->
+            {{ end }}
+            {{ partial "pagination.html" . }}
+{{ end }}
