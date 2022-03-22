@@ -1,6 +1,0 @@
----
-title: "جامعه"
-description: ""
-tags: []
----
-
