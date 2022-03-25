@@ -2,7 +2,7 @@
 title: "تجمع اعتراضی فرهنگیان شیراز سوم اسفند ۱۴۰۰"
 date: 2022-03-07
 description: "روز سوم اسفند حدود هزار نفر از فرهنگیان معترض جلوی اداره آموزش و پرورش استان فارس جمع شدند و حدود سه ساعت شعار دادند و سخنرانی کردند. این مقاله گوشه هایی از این تجمع را پوشش می دهد"
-tags: [معلمان,فرهنگیان,تجمع,شیراز,سوم اسفند]
+tags: [معلمان,فرهنگیان,آموزگاران,تجمع,اعتراض,شیراز]
 hasGallery: true
 gallery: [./images/1.jpg,./images/2.jpg,./images/3.jpg,./images/4.jpg,./images/5.jpg]
 galleryThumbnails: [./images/thumbnail-1.jpg,./images/thumbnail-2.jpg,./images/thumbnail-3.jpg,./images/thumbnail-4.jpg,./images/thumbnail-5.jpg]
