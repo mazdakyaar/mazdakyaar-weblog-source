@@ -17,6 +17,20 @@ rootPath = "https://mazdakyaar.frama.io"
 [params.social]
 Email         = "mazdakyaar@gmail.com"
 
+[params.shortcuts]
+	[params.shortcuts.a_home]
+		label = "خانه"
+		path = "/"
+	[params.shortcuts.b_about]
+		label = "درباره"
+		path = "/misc/about/"
+	[params.shortcuts.c_newsletter]
+		label = "خبرنامه"
+		path = "/newsletter/"
+	[params.shortcuts.d_keywords]
+		label = "کلمات کلیدی"
+		path = "/tags/"
+
 [taxonomies]
   tag = 'tags'
 

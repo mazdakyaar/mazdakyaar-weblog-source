@@ -3,8 +3,9 @@
   <p class="w3-xlarge">{{ .Site.Title }}</p>
   <p class="w3-bkack w3-opacity">{{ .Site.Params.Description }}</p>
   <div class="w3-bar">
-    <a href="/" class="w3-bar-item w3-button w3-mobile w3-right w3-hover-green">صفحه نخست</a>
-    <a href="/newsletter/" class="w3-bar-item w3-button w3-mobile w3-right w3-hover-green">خبرنامه</a>
-    <a href="/misc/about/" class="w3-bar-item w3-button w3-mobile w3-right w3-hover-green">درباره وبلاگ</a>
+  	{{ range .Site.Params.Shortcuts }}
+  	{{ $path := index . "path" }}
+    <a href="{{ $path }}" class="w3-bar-item w3-button w3-mobile w3-right w3-hover-green">{{ index . "label" }}</a>
+    {{ end }}
   </div>
   </nav>
