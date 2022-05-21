@@ -180,6 +180,7 @@ pre{
 
 .datasheet td {
   text-align: center;
+  direction: rtl;
 }
 
 /***** Slides Galery ******/
