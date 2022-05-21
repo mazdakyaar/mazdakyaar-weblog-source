@@ -168,6 +168,20 @@ pre{
 	border-width: thin;
 }
 
+/* Tables v2 */
+.datasheet {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+.datasheet thead {
+  border-bottom: 1px solid black;
+}
+
+.datasheet td {
+  text-align: center;
+}
+
 /***** Slides Galery ******/
 .container, .mySlides, .slide-column, .slides-row, .cursor, .prev, .next, .demo {
 	box-sizing: border-box;
