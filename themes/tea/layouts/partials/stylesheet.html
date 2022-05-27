@@ -1,2 +1,5 @@
 	<link rel="stylesheet" href="/css/w3c.css"/>
    	<link rel="stylesheet" href="/css/custom.css"/>
+{{- range .Params.custom_css -}}
+	<link rel="stylesheet" href="/css/{{ . }}"/>
+{{ end }}
